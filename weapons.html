@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destiny 2 – Weapons</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Destiny 2 Weapons</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Lore</a></li>
+        <li><a href="weapons.html" class="active">Weapons</a></li>
+        <li><a href="#">Villains</a></li>
+        <li><a href="#">Artworks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Exotic & Legendary Weapons</h2>
+
+    <!-- Season Cards Grid -->
+    <section class="dungeons" id="season-cards">
+      <div class="dungeon-card" data-season="season-of-the-seraph">
+        <img src="assets/season-seraph.png" alt="Season of the Seraph">
+        <h2>Season of the Seraph</h2>
+      </div>
+      <div class="dungeon-card" data-season="season-of-defiance">
+        <img src="assets/season-defiance.png" alt="Season of Defiance">
+        <h2>Season of Defiance</h2>
+      </div>
+      <div class="dungeon-card" data-season="season-of-the-deep">
+        <img src="assets/season-deep.png" alt="Season of the Deep">
+        <h2>Season of the Deep</h2>
+      </div>
+      <div class="dungeon-card" data-season="season-of-the-witch">
+        <img src="assets/season-witch.png" alt="Season of the Witch">
+        <h2>Season of the Witch</h2>
+      </div>
+      <div class="dungeon-card" data-season="season-of-the-wish">
+        <img src="assets/season-wish.png" alt="Season of the Wish">
+        <h2>Season of the Wish</h2>
+      </div>
+      <div class="dungeon-card" data-season="season-of-echoes">
+        <img src="assets/season-echoes.png" alt="Season of Echoes">
+        <h2>Season of Echoes</h2>
+      </div>
+      <div class="dungeon-card" data-season="season-of-revenant">
+        <img src="assets/season-revenant.png" alt="Season of the Revenant">
+        <h2>Season of the Revenant</h2>
+      </div>
+      <div class="dungeon-card" data-season="season-of-heresy">
+        <img src="assets/season-heresy.png" alt="Season of Heresy">
+        <h2>Season of Heresy</h2>
+      </div>
+    </section>
+
+    <!-- Weapons will populate here -->
+    <section class="weapon-list" id="weapon-list">
+      <p>Select a season to view god roll weapons.</p>
+    </section>
+
+    <!-- Back Button -->
+    <div id="back-button" style="display: none; text-align: center; margin-top: 20px;">
+      <button onclick="returnToSeasons()">← Back to Seasons</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Damien's Destiny 2 Tracker</p>
+  </footer>
+
+  <script src="weapons.js"></script>
+</body>
+</html>
