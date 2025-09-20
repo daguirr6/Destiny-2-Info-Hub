@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Destiny 2 Lore Timeline</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #1b1c1e;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #232427;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fff;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .lore-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .lore-era {
+      padding-left: 1rem;
+      border-left: 8px solid var(--era-color);
+    }
+    .lore-era h2 {
+      color: var(--era-color);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .lore-entry {
+      background-color: #2b2c2f;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .lore-entry h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .lore-entry p {
+      color: #bbb;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .lore-entry a {
+      color: #80ffea;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .lore-entry a:hover {
+      text-decoration: underline;
+    }
+    .expanded-era {
+      margin-top: 2rem;
+      display: none;
+    }
+    .sticky-video {
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      width: 300px;
+      height: auto;
+      z-index: 1;
+      border: 2px solid #80ffea;
+    }
+    .chapter {
+      margin-top: 2rem;
+      background-color: #2e2e32;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #bbb;
+      border-top: 2px solid #444;
+    }
+  </style>
+  <script>
+    function showAncientPast() {
+      document.querySelectorAll('.lore-era').forEach((el, idx) => {
+        if (idx !== 0) el.style.display = 'none';
+      });
+      document.getElementById('ancient-expanded').style.display = 'block';
+      document.getElementById('ancient-video').style.display = 'block';
+    }
+  </script>
+  <script src="lore.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Destiny 2 Lore Timeline</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lore.html" class="active">Lore</a></li>
+        <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="villains.html">Villains</a></li>
+        <li><a href="artworks.html">Artworks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="lore-timeline">
+      <div class="lore-era" style="--era-color: #6a994e">
+        <h2>Ancient Past</h2>
+        <div class="lore-entry">
+          <h3>Origin of the Witness</h3>
+          <p>The Witness was once part of a species that sought unity through the Light — ultimately becoming something much darker.
+            <a onclick="showAncientPast()">Read more →</a>
+          </p>
+        </div>
+      </div>
+<iframe
+  id="ancient-video"
+  class="sticky-video"
+  style="display: none;"
+  src="https://youtu.be/MmFFvvn3gcI?si=SYBLnFTE_sHonElN"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+
+      <!-- Keep the rest of your eras here as-is (Pre-Golden Age, Golden Age, Collapse, etc.) -->
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Damien's Destiny 2 Tracker</p>
+  </footer>
+</body>
+</html>
